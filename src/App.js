@@ -7,7 +7,8 @@ import '@aws-amplify/ui-react/styles.css';
 
 import {
   ShareButton,
-  SongCardCollection 
+  SongCardCollection,
+  CreateSongForm 
 } from './ui-components';
 
 import awsExports from './aws-exports';
