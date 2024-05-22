@@ -1,0 +1,10 @@
+{
+  "resourceName": "s3amplofi3storage0158dcda",
+  "bucketName": "amplofi3-storage-0158dcda",
+  "policyUUID": "a8ff6f96",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ]
+}

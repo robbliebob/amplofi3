@@ -6,10 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
+import { getOverrideProps, useNavigateAction } from "./utils";
 import { Button, Flex } from "@aws-amplify/ui-react";
 export default function ShareButton(props) {
-  const { overrides, ...rest } = props;
+  const { song, overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({ type: "url", url: "/create-song" });
   return (
     <Flex
       gap="0"
@@ -32,6 +33,9 @@ export default function ShareButton(props) {
         isDisabled={false}
         variation="primary"
         children="Share Your Latest Song!"
+        onClick={() => {
+          buttonOnClick();
+        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </Flex>

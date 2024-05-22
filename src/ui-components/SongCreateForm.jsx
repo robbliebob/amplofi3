@@ -230,11 +230,11 @@ export default function SongCreateForm(props) {
       <TextField
         label={
           <span style={{ display: "inline-flex" }}>
-            <span>YouTube URL</span>
+            <span>Spotify URL</span>
             <span style={{ color: "red" }}>*</span>
           </span>
         }
-        descriptiveText="Songs must be uploaded to YouTube"
+        descriptiveText="Songs must be uploaded to Spotify"
         isRequired={true}
         isReadOnly={false}
         value={url}
