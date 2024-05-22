@@ -1,6 +1,6 @@
 import { SongCreateForm } from '/ui-components'
 
-export default function SongCreateForm() {
+export default function CreateSong() {
     return (
         <SongCreateForm />
     )
