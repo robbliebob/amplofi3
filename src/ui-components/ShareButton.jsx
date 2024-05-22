@@ -9,8 +9,12 @@ import * as React from "react";
 import { getOverrideProps, useNavigateAction } from "./utils";
 import { Button, Flex } from "@aws-amplify/ui-react";
 export default function ShareButton(props) {
-  const { song, overrides, ...rest } = props;
-  const buttonOnClick = useNavigateAction({ type: "url", url: "/create-song" });
+  const { overrides, ...rest } = props;
+  const shareButtonOnClick = useNavigateAction({
+    type: "url",
+    url: "",
+  });
+  const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <Flex
       gap="0"
@@ -21,6 +25,9 @@ export default function ShareButton(props) {
       alignItems="flex-start"
       position="relative"
       padding="0px 0px 0px 0px"
+      onClick={() => {
+        shareButtonOnClick();
+      }}
       {...getOverrideProps(overrides, "ShareButton")}
       {...rest}
     >

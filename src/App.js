@@ -1,5 +1,7 @@
-import React from 'react';
+//import React from 'react';
+import React, { useState } from 'react';
 import { Amplify } from 'aws-amplify';
+ // Import useState
 
 import { Authenticator } from '@aws-amplify/ui-react';
 import { View, Image, useTheme } from '@aws-amplify/ui-react';
@@ -17,7 +19,6 @@ Amplify.configure(awsExports);
 const components = {
   Header() {
     const { tokens } = useTheme();
-
     return (
       <View textAlign="center" padding={tokens.space.large}>
         <Image
@@ -30,6 +31,15 @@ const components = {
 };
 
 export default function App() {
+  const [showForm, setShowForm] = useState(false);
+  const toggleForm = () => {
+    setShowForm(!showForm); // Toggle showForm state
+  };
+
+  const handleFormClose = () => {
+    setShowForm(false);
+    window.location.reload(); // Reload the page
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh' }}>
@@ -38,7 +48,12 @@ export default function App() {
           <main>
             <components.Header />
             <div style={{ textAlign: 'center', flexGrow: 1 }}>
-              <ShareButton />
+              <ShareButton onClick={toggleForm}>
+                  {showForm ? 'Collaspe Form' : 'Share Song!'}
+                </ShareButton>
+                {showForm && (
+                  <SongCreateForm onSuccess={handleFormClose} />
+                )}
               <SongCardCollection />
             </div>
           </main>

@@ -37,6 +37,7 @@ export { default as SocialPost } from "./SocialPost";
 export { default as SongCard } from "./SongCard";
 export { default as SongCardCollection } from "./SongCardCollection";
 export { default as SongCreateForm } from "./SongCreateForm";
+export { default as SongCreateForm2 } from "./SongCreateForm2";
 export { default as SongUpdateForm } from "./SongUpdateForm";
 export { default as StandardCard } from "./StandardCard";
 export { default as Stat } from "./Stat";

@@ -1,6 +1,6 @@
 // import { SongCreateForm } from './ui-components';
 
-// export default function CreateSong() {
+// export default function SongCreateForm() {
 //     return (
 //         <SongCreateForm />
 //     )
@@ -8,6 +8,10 @@
 
 import {
     SongCreateForm 
-   } from './ui-components';
-   
-   <SongCreateForm/>
+   } from '.';
+
+export default function SongCreateForm() {
+
+    <SongCreateForm />
+  }
+  
