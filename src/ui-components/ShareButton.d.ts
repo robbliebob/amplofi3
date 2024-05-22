@@ -22,6 +22,8 @@ export declare type ShareButtonOverridesProps = {
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ShareButtonProps = React.PropsWithChildren<Partial<FlexProps> & {
+    song?: any;
+} & {
     overrides?: ShareButtonOverridesProps | undefined | null;
 }>;
 export default function ShareButton(props: ShareButtonProps): React.ReactElement;

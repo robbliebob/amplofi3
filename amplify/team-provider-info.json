@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "AmpLofi3": {}
+      },
+      "storage": {
+        "s3amplofi3storage0158dcda": {}
       }
     }
   }
