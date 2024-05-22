@@ -15,3 +15,13 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+import { ThemeProvider } from "@aws-amplify/ui-react";
+import { Amplify } from 'aws-amplify';
+
+import awsconfig from './aws-exports';
+
+import "@aws-amplify/ui-react/styles.css";
+import { studioTheme } from "./ui-components";
+
+Amplify.configure(awsconfig);
