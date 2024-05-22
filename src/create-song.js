@@ -10,5 +10,4 @@ import {
     SongCreateForm 
    } from './ui-components';
    
-   <SongCreateForm />
-   
+   <SongCreateForm/>
