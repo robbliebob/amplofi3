@@ -1,7 +1,14 @@
-import { SongCreateForm } from './ui-components';
+// import { SongCreateForm } from './ui-components';
 
-export default function CreateSong() {
-    return (
-        <SongCreateForm />
-    )
-}
+// export default function CreateSong() {
+//     return (
+//         <SongCreateForm />
+//     )
+// }
+
+import {
+    SongCreateForm 
+   } from './ui-components';
+   
+   <SongCreateForm />
+   
